@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal rclone Drive Client</title>
+  <meta name="description" content="Home page of a personal Google OAuth client used with rclone to access the owner's own Google Drive.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="brand" href="./">Personal rclone Drive Client</a>
+      <nav>
+        <a href="./" aria-current="page">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Personal rclone Drive Client</h1>
+    <p class="lede">A private Google OAuth client that lets the open-source tool rclone, running on the owner's own computers, reach the owner's own Google Drive.</p>
+
+    <div class="card">
+      <p><strong>This is not a public service.</strong> There is nothing to sign up for and no hosted app. The client exists only so that its owner can use rclone with Google Drive without sharing rclone's default, rate-limited client ID with every other rclone user.</p>
+    </div>
+
+    <h2>What it does</h2>
+    <p><a href="https://rclone.org/">rclone</a> is a free, open-source command-line program for managing files on cloud storage. When rclone is set up with this client, it asks Google for permission to read and manage the signed-in user's Google Drive so that it can:</p>
+    <ul>
+      <li>list the files and folders in the user's Drive,</li>
+      <li>copy, sync, back up and download files between the user's computer and their Drive,</li>
+      <li>mount or stream the user's Drive files on the user's own devices.</li>
+    </ul>
+
+    <h2>Where your data goes</h2>
+    <p>Everything runs locally. File contents and metadata travel directly between Google's servers and the computer running rclone. No server operated by the owner of this client ever receives, stores or sees Google user data. The full details are in the <a href="privacy.html">Privacy Policy</a>.</p>
+
+    <h2>Permissions requested</h2>
+    <ul>
+      <li><code>https://www.googleapis.com/auth/drive</code> — see, edit, create and delete files in the user's Google Drive.</li>
+      <li><code>https://www.googleapis.com/auth/docs</code> — see, edit, create and delete Google Docs-format files, so rclone can export and import them.</li>
+      <li><code>https://www.googleapis.com/auth/drive.metadata.readonly</code> — read file names and details (metadata) without changing anything.</li>
+    </ul>
+
+    <h2>Not affiliated</h2>
+    <p>This client is not made, endorsed or operated by the rclone project or by Google. "Google Drive" is a trademark of Google LLC.</p>
+  </main>
+
+  <footer>
+    <div class="bar">
+      <span>Personal rclone Drive Client · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
+    </div>
+  </footer>
+</body>
+</html>
